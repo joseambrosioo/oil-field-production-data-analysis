@@ -44,7 +44,12 @@ The dataset contains **24 columns** with information such as:
 - **BORE_WAT_VOL**: Volume of water produced.
 - **WELL_TYPE**: Type of well (Producer or Injector).
 
+![image](https://github.com/user-attachments/assets/6fba66fd-861d-4b1f-9751-bfc54263c889)
+
+*Figure 1. Heatmap diagram of all the fields in dataframe (The yellow color represents the null values)*
+
 ## 3. Process Phase
+In this phase we perform data cleaning by imputation, There are many columns that are not useful to our Analysis and we can simply drop them.
 
 ### Data Cleaning
 - **Filtering**: Only data from producer wells (WELL_TYPE = 'OP') was retained for analysis.
@@ -55,6 +60,8 @@ The dataset contains **24 columns** with information such as:
 - The `NPD_WELL_BORE_CODE` column was converted to a string type for easier visualization and analysis.
 
 ## 4. Analyze Phase
+![image](https://github.com/user-attachments/assets/e20ee59f-9d95-4ad1-98e6-d3bf12b7cfa2)
+* After droping unuseful columns, we can again plot a heatmap plot to visualize null data in our dataframe. As can be seen in the above heatmap, the column BORE_WI_VOL is yellow signifying null value, this is because we have taken only the producing wells, so there is no water injection from producing wells.*
 
 ### Key Insights
 - **Well Performance**: The wells with codes **5599** and **5351** were identified as the most significant producers.
@@ -66,25 +73,6 @@ The dataset contains **24 columns** with information such as:
 - **Scatter Plot**: Showed the oil production trends over time for each well.
 - **Line Plot**: Highlighted the declining production trends and water production volumes.
 - **Heatmap**: Used to identify correlations between different production variables.
-
-## 5. Share Phase
-
-### Summary of Findings
-- **Significant Producers**: Wells **5599** and **5351** are the most productive.
-- **Declining Wells**: Wells **7405**, **7289**, and **5769** are producing more water than oil, indicating they may be nearing the end of their economic life.
-- **Correlation**: Strong correlation between oil and gas production was observed.
-
-### Recommendations
-- **Focus on High Producers**: Allocate resources to maximize production from wells **5599** and **5351**.
-- **Monitor Declining Wells**: Consider shutting down or reassessing the economic viability of wells **7405**, **7289**, and **5769**.
-- **Further Analysis**: Investigate the causes of declining production and explore potential interventions to enhance recovery.
-
-## 6. Act Phase
-
-### Next Steps
-- **Implement Recommendations**: Share the findings with the production and management teams for decision-making.
-- **Predictive Modeling**: Develop machine learning models to predict future production trends and optimize well performance.
-- **Continuous Monitoring**: Set up a dashboard for real-time monitoring of well performance.
 
 ## Key Takeaways
 
