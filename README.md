@@ -1,5 +1,7 @@
 # Oil Field Production Data Analysis
 
+![image](https://github.com/user-attachments/assets/7f9f2f26-31da-4a32-a2de-a94d21294f90)
+
 ## Project Overview
 This project focuses on performing **Exploratory Data Analysis (EDA)** on publicly available well-production data from the **Volve Field**. The dataset includes data from **7 wells** (both producer and injector wells). The analysis aims to provide insights into the production performance of the wells, identify significant producers, and detect wells that may be nearing depletion.
 
