@@ -69,11 +69,11 @@ In this phase we perform data cleaning by imputation, There are many columns tha
 
 ![image](https://github.com/user-attachments/assets/e20ee59f-9d95-4ad1-98e6-d3bf12b7cfa2)
 
-* Figure 2. After droping unuseful columns, we can again plot a heatmap plot to visualize null data in our dataframe. As can be seen in the above heatmap, the column BORE_WI_VOL is yellow signifying null value, this is because we have taken only the producing wells, so there is no water injection from producing wells.*
+*Figure 2. After droping unuseful columns, we can again plot a heatmap plot to visualize null data in our dataframe. As can be seen in the above heatmap, the column BORE_WI_VOL is yellow signifying null value, this is because we have taken only the producing wells, so there is no water injection from producing wells.*
 
 ![image](https://github.com/user-attachments/assets/b06a2ecf-5803-4d56-a500-e936b6af151c)
 
-* Figure 3. *
+*Figure 3.*
 
 As seen in the above ECDF plot, we can see that for the well 7405, almost 40% data is zero Bore_OIL_VOL production and similarly for Well 7289, almost 20% data is zero Bore_OIL_VOL production. Similar case is with the well 5769. In All these three wells , the total Cumulative production is also significatly less compared to other producing wells. So let us ignore these three wells during our production prediction Machine learning model training
 
