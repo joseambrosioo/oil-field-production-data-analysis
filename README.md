@@ -1,4 +1,4 @@
-# Oil Field Production Data Analysis
+![image](https://github.com/user-attachments/assets/17448c98-57e0-49bc-b621-f5a146f6a957)# Oil Field Production Data Analysis
 
 ## Project Overview
 This project focuses on performing **Exploratory Data Analysis (EDA)** on publicly available well-production data from the **Volve Field**. The dataset includes data from **7 wells** (both producer and injector wells). The analysis aims to provide insights into the production performance of the wells, identify significant producers, and detect wells that may be nearing depletion.
@@ -60,8 +60,27 @@ In this phase we perform data cleaning by imputation, There are many columns tha
 - The `NPD_WELL_BORE_CODE` column was converted to a string type for easier visualization and analysis.
 
 ## 4. Analyze Phase
+### Let us perfrom a ROCCC analysis on our production data as follows:
+- **RELIABLE**: Yes the data is reliable as it is a public dataset.
+- **ORIGINAL**: Yes , the public data set is accecible to everyone to cross verify
+- **COMPREHENSIVE**: the data is useful for our case study. Although has missing data points. (we need to perform data imputation in the data cleaning phase)
+- **CURRENT**: NO, the data is old and as the Volve field was abandoned for production, this is the total dataset available
+- **CITED**: yes, This Volve Data set is one of its kind and Publicly available, so this dataSet is heavilily cited in almost all the significant Journals
+
 ![image](https://github.com/user-attachments/assets/e20ee59f-9d95-4ad1-98e6-d3bf12b7cfa2)
-* After droping unuseful columns, we can again plot a heatmap plot to visualize null data in our dataframe. As can be seen in the above heatmap, the column BORE_WI_VOL is yellow signifying null value, this is because we have taken only the producing wells, so there is no water injection from producing wells.*
+
+* Figure 2. After droping unuseful columns, we can again plot a heatmap plot to visualize null data in our dataframe. As can be seen in the above heatmap, the column BORE_WI_VOL is yellow signifying null value, this is because we have taken only the producing wells, so there is no water injection from producing wells.*
+
+![image](https://github.com/user-attachments/assets/b06a2ecf-5803-4d56-a500-e936b6af151c)
+
+* Figure 3. *
+
+As seen in the above ECDF plot, we can see that for the well 7405, almost 40% data is zero Bore_OIL_VOL production and similarly for Well 7289, almost 20% data is zero Bore_OIL_VOL production. Similar case is with the well 5769. In All these three wells , the total Cumulative production is also significatly less compared to other producing wells. So let us ignore these three wells during our production prediction Machine learning model training
+
+On the basis of ecdf plot,we might be tempted to erroneously concluded that the wells #7405 and #7289 were water injector wells because they have BORE_WAT_VOL (bore water volume ). This conclusion is wrong as the dataset clearly states all these 6 wells to be Oil Producer wells.
+The correct conclusion will be achieved only when we integrate Petroleum Domain Knowledge with this Data Analysis. In any oil and/gas producing well, water is also produced mixed with crude. Till some economically feasible water cut ratio, the oil/gas production is viable , but as the water percentage increases, and it crosses the threshold for economic viability, the well is abandoned. Althogh the particular well is still a producing well, but it is producing more water than hydrocarbon fluid.
+
+so in this case although both these wells are producer type but their oil production is not significant for consideration.
 
 ### Key Insights
 - **Well Performance**: The wells with codes **5599** and **5351** were identified as the most significant producers.
@@ -100,7 +119,6 @@ In this phase we perform data cleaning by imputation, There are many columns tha
    - The analysis provides actionable insights for the production and management teams to optimize well performance and make informed decisions.
 
 ## Conclusion
-
 The exploratory data analysis of the Volve Field production data has provided valuable insights into the performance of the producer wells. By identifying the most productive wells (**5599** and **5351**) and highlighting the declining performance of others (**7405**, **7289**, and **5769**), this analysis offers a clear roadmap for optimizing production and resource allocation. The findings emphasize the importance of integrating domain knowledge with data analysis to draw accurate conclusions, particularly in understanding the economic viability of wells with high water production.
 
 The visualizations and statistical analysis have effectively communicated the trends and correlations within the dataset, enabling stakeholders to make data-driven decisions. This project underscores the power of data analysis in the oil and gas industry to improve operational efficiency and profitability.
