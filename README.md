@@ -75,12 +75,11 @@ In this phase we perform data cleaning by imputation, There are many columns tha
 
 *Figure 3.*
 
-As seen in the above ECDF plot, we can see that for the well 7405, almost 40% data is zero Bore_OIL_VOL production and similarly for Well 7289, almost 20% data is zero Bore_OIL_VOL production. Similar case is with the well 5769. In All these three wells , the total Cumulative production is also significatly less compared to other producing wells. So let us ignore these three wells during our production prediction Machine learning model training
+As seen in the ECDF plot above, well 7405 shows almost 40% of its data points with zero BORE_OIL_VOL (oil production volume). Similarly, well 7289 has nearly 20% of its data points with zero oil production. The same trend is observed for well 5769. In all three wells, the cumulative production is significantly lower compared to the other producing wells. Therefore, these three wells will be excluded during the training of our production prediction machine learning model.
 
-On the basis of ecdf plot,we might be tempted to erroneously concluded that the wells #7405 and #7289 were water injector wells because they have BORE_WAT_VOL (bore water volume ). This conclusion is wrong as the dataset clearly states all these 6 wells to be Oil Producer wells.
-The correct conclusion will be achieved only when we integrate Petroleum Domain Knowledge with this Data Analysis. In any oil and/gas producing well, water is also produced mixed with crude. Till some economically feasible water cut ratio, the oil/gas production is viable , but as the water percentage increases, and it crosses the threshold for economic viability, the well is abandoned. Althogh the particular well is still a producing well, but it is producing more water than hydrocarbon fluid.
+Based on the ECDF plot, one might mistakenly conclude that wells #7405 and #7289 are water injector wells due to their BORE_WAT_VOL (water production volume). However, this conclusion is incorrect, as the dataset explicitly categorizes all six wells as oil producers. The accurate interpretation requires integrating petroleum domain knowledge with data analysis. In oil and gas production, water is often produced alongside hydrocarbons. While production remains economically viable up to a certain water-cut ratio, once water production exceeds this threshold, the well becomes uneconomical and is often abandoned. Although these wells are still classified as producers, they are yielding more water than hydrocarbons.
 
-so in this case although both these wells are producer type but their oil production is not significant for consideration.
+Thus, while wells #7405, #7289, and #5769 are technically producer wells, their oil production is negligible and not significant for further consideration in this analysis.
 
 ### Key Insights
 - **Well Performance**: The wells with codes **5599** and **5351** were identified as the most significant producers.
