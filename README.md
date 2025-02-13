@@ -81,11 +81,6 @@ Based on the ECDF plot, one might mistakenly conclude that wells #7405 and #7289
 
 Thus, while wells #7405, #7289, and #5769 are technically producer wells, their oil production is negligible and not significant for further consideration in this analysis.
 
-### Key Insights
-- **Well Performance**: The wells with codes **5599** and **5351** were identified as the most significant producers.
-- **Declining Production**: A declining trend in oil production was observed across all wells, with some wells showing intermittent zero production, indicating periodic shut-ins.
-- **Water Production**: Wells **7405**, **7289**, and **5769** showed higher water production relative to oil, making them less economically viable.
-
 ### Visualizations
 - **ECDF Plot**: Used to visualize the cumulative distribution of oil production across wells.
 - **Scatter Plot**: Showed the oil production trends over time for each well.
